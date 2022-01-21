@@ -10,7 +10,9 @@ namespace CSharpAssignmentDay3
           int partTimeHrs=4;
           int FullTimeHrs=8;
           int wagePerHour=20;
-          int EmpWage;
+          int workingDayPerMonth = 20;
+          int EmpWagePerDay;
+          int EmpWagePerMonth;
           // int empHrs=0;
         
                   Random random = new Random();
@@ -19,15 +21,21 @@ namespace CSharpAssignmentDay3
                   switch(empCheck)
                   {
                     case 1 :
-                    EmpWage= partTimeHrs*wagePerHour;
-                    Console.WriteLine("Part time employee wage is:" +EmpWage);
+                    EmpWagePerDay= partTimeHrs*wagePerHour;
+                    EmpWagePerMonth=EmpWagePerDay*workingDayPerMonth;
+                    Console.WriteLine("Part time employee wage is:" +EmpWagePerDay);
+                    Console.WriteLine("Part time employee wage per month is:" +EmpWagePerMonth);
                     break;
+
                     case 2 :
-                    EmpWage= FullTimeHrs*wagePerHour;
-                    Console.WriteLine("Full time employee wage is:" +EmpWage);
+                    EmpWagePerDay= FullTimeHrs*wagePerHour;
+                    EmpWagePerMonth=EmpWagePerDay*workingDayPerMonth;
+                    Console.WriteLine("Full time employee wage is:" +EmpWagePerDay);
+                    Console.WriteLine("Full time employee wage per month is:" +EmpWagePerMonth);
                     break;
+
                     default :
-                    EmpWage = 0;
+                    EmpWagePerMonth = 0;
                     Console.WriteLine("Employee is absent");
                     break;
                   }
