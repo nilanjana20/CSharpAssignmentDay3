@@ -7,31 +7,30 @@ namespace CSharpAssignmentDay3
  		public static void EmployeeWageSolution()
 			{
 				{
-          int partTime=1;
-          int FullTime=2;
+          int partTimeHrs=4;
+          int FullTimeHrs=8;
           int wagePerHour=20;
-          int EmpWage=0;
-          int empHrs=0;
+          int EmpWage;
+          // int empHrs=0;
         
                   Random random = new Random();
                   int empCheck = random.Next(0,3);
 
-                  if(empCheck == partTime)
+                  if(empCheck == 1)
                   {
-                    empHrs = 4;
-                    EmpWage=wagePerHour*empHrs;
+                    // empHrs = 4;
+                    EmpWage=wagePerHour*partTimeHrs;
                     // Console.WriteLine("Employee is present");
                     Console.WriteLine("Part time employee wage is:" +EmpWage);
                   }
-                  else if(empCheck == FullTime)
+                  else if(empCheck == 2)
                   {
-                    empHrs = 8;
-                    EmpWage=wagePerHour*empHrs;
-                    Console.WriteLine("Part time employee wage is:" +EmpWage);
+                    // empHrs = 8;
+                    EmpWage=wagePerHour*FullTimeHrs;
+                    Console.WriteLine("Full time employee wage is:" +EmpWage);
                   }
                   else
                   {
-                    empHrs = 0;
                     Console.WriteLine("Employee is absent");  
                   }
          }
