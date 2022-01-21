@@ -15,23 +15,21 @@ namespace CSharpAssignmentDay3
         
                   Random random = new Random();
                   int empCheck = random.Next(0,3);
-
-                  if(empCheck == 1)
+                  
+                  switch(empCheck)
                   {
-                    // empHrs = 4;
-                    EmpWage=wagePerHour*partTimeHrs;
-                    // Console.WriteLine("Employee is present");
+                    case 1 :
+                    EmpWage= partTimeHrs*wagePerHour;
                     Console.WriteLine("Part time employee wage is:" +EmpWage);
-                  }
-                  else if(empCheck == 2)
-                  {
-                    // empHrs = 8;
-                    EmpWage=wagePerHour*FullTimeHrs;
+                    break;
+                    case 2 :
+                    EmpWage= FullTimeHrs*wagePerHour;
                     Console.WriteLine("Full time employee wage is:" +EmpWage);
-                  }
-                  else
-                  {
-                    Console.WriteLine("Employee is absent");  
+                    break;
+                    default :
+                    EmpWage = 0;
+                    Console.WriteLine("Employee is absent");
+                    break;
                   }
          }
 			}
